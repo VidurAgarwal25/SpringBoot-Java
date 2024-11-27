@@ -1508,3 +1508,9 @@ org.eclipse.swt.SWTException: Invalid thread access
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-27 15:03:00.448
 !MESSAGE Classpath changed for project: springbootmvc
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-27 19:26:31.768
+!MESSAGE Classpath changed for project: springbootjpa
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-27 19:26:31.769
+!MESSAGE Boot project ADDED: springbootjpa
