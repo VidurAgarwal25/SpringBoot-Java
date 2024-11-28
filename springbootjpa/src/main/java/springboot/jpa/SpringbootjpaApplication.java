@@ -32,16 +32,18 @@ public class SpringbootjpaApplication {
 		//read
 		Optional<User> optional = userRepository.findById(102);
 		User user = optional.get();
-		System.out.println(user);
+//		System.out.println(user);
+//		
+//		//read all
+//		System.out.println(userRepository.findAll());
+//		
+//		//update
+//		
+//		user.setName("Vidur Agarwal");
+//		User user1 = userRepository.save(user);
+//		System.out.println("Updated user "+ user1);
 		
-		//read all
-		System.out.println(userRepository.findAll());
-		
-		//update
-		
-		user.setName("Vidur Agarwal");
-		User user1 = userRepository.save(user);
-		System.out.println("Updated user "+ user1);
+		userRepository.delete(user);
 	}
 
 }
