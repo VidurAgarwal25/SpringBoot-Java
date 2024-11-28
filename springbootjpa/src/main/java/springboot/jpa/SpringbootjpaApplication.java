@@ -1,5 +1,7 @@
 package springboot.jpa;
 
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -20,6 +22,18 @@ public class SpringbootjpaApplication {
 
 		User user1 = userRepository.save(user);
 		System.out.println(user1);
+		
+		//create
+		User user2 = new User();
+		user2.setName("Agarwal");
+		user2.setCity("Uttar Pradesh");
+		user2.setStatus("Active");
+		
+		User user3 = userRepository.save(user2);
+		System.out.println(user3);
+		
+		List<User> list = List.of(user,user2,user3);
+		userRepository.saveAll(list);
 	}
 
 }
