@@ -30,20 +30,24 @@ public class SpringbootjpaApplication {
 		 * List<User> list = List.of(user,user2,user3); userRepository.saveAll(list);
 		 */
 		//read
-		Optional<User> optional = userRepository.findById(102);
-		User user = optional.get();
-//		System.out.println(user);
-//		
-//		//read all
-//		System.out.println(userRepository.findAll());
-//		
-//		//update
-//		
-//		user.setName("Vidur Agarwal");
-//		User user1 = userRepository.save(user);
-//		System.out.println("Updated user "+ user1);
+		/*
+		 * Optional<User> optional = userRepository.findById(102); User user =
+		 * optional.get(); // System.out.println(user); // // //read all //
+		 * System.out.println(userRepository.findAll()); // // //update // //
+		 * user.setName("Vidur Agarwal"); // User user1 = userRepository.save(user); //
+		 * System.out.println("Updated user "+ user1);
+		 * 
+		 * userRepository.delete(user);
+		 */
 		
-		userRepository.delete(user);
+		List<User> list = userRepository.findByName("Agarwal");
+		System.out.println(list);
+		
+		List<User> list1 = userRepository.findByNameAndCity("Vidur","Meerut");
+		System.out.println(list1);
+		
+		List<User> list3 = userRepository.findByNameContaining("rwa");
+		System.out.println(list3);
 	}
 
 }
