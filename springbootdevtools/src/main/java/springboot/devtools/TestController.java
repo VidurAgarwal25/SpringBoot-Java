@@ -12,6 +12,7 @@ public class TestController {
 	public String test() {
 		int a=4;
 		int b=2;
-		return "I am returning the sum of numbers "+(a+b);
+		int c=8;
+		return "I am returning the sum of numbers "+(a+b+c);
 	}
 }
