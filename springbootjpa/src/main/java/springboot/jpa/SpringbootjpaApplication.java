@@ -40,14 +40,28 @@ public class SpringbootjpaApplication {
 		 * userRepository.delete(user);
 		 */
 		
-		List<User> list = userRepository.findByName("Agarwal");
-		System.out.println(list);
+		/*
+		 * List<User> list = userRepository.findByName("Agarwal");
+		 * System.out.println(list);
+		 * 
+		 * List<User> list1 = userRepository.findByNameAndCity("Vidur","Meerut");
+		 * System.out.println(list1);
+		 * 
+		 * List<User> list3 = userRepository.findByNameContaining("rwa");
+		 * System.out.println(list3);
+		 */
 		
-		List<User> list1 = userRepository.findByNameAndCity("Vidur","Meerut");
-		System.out.println(list1);
-		
-		List<User> list3 = userRepository.findByNameContaining("rwa");
+		List<User> list3 = userRepository.getAll();
 		System.out.println(list3);
+		
+		List<User> list4 = userRepository.getByName("Agarwal");
+		System.out.println(list4);
+		
+		List<User> list5 = userRepository.getByNameAndCity("Vidur Agarwal","Kashmir");
+		System.out.println(list5);
+		
+		List<User> list6 = userRepository.getAllUsersByNativeQuery();
+		System.out.println(list6);
 	}
 
 }
