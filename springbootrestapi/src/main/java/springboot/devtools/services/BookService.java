@@ -33,4 +33,8 @@ public class BookService {
 	public void addBook(Book book) {
 		list.add(book);
 	}
+
+	public void deleteBook(Book book) {
+			list.removeIf(e -> e.getId() == book.getId());
+	}
 }

@@ -3,6 +3,7 @@ package springboot.devtools.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,6 +32,12 @@ public class BookController {
 	@PostMapping("/addbook")
 	public Book createBook(@RequestBody Book book) {
 		 this.bookService.addBook(book);
+		 return book;
+	}
+	
+	@DeleteMapping("/deletebook")
+	public Book deleteBook(@RequestBody Book book) {
+		 this.bookService.deleteBook(book);
 		 return book;
 	}
 }
