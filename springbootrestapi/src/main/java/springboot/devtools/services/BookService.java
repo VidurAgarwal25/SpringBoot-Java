@@ -37,4 +37,13 @@ public class BookService {
 	public void deleteBook(Book book) {
 			list.removeIf(e -> e.getId() == book.getId());
 	}
+
+	public void updateBook(int id, Book entity) {
+		Optional<Book> optionalBook = list.stream().filter(e -> e.getId() == id).findFirst();
+		Book book = optionalBook.orElse(null);
+		if(book!=null) {
+			book.setAuthor(entity.getAuthor());
+			book.setTitle(entity.getTitle());
+		}
+	}
 }

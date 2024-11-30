@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import springboot.devtools.entities.Book;
 import springboot.devtools.services.BookService;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController
 public class BookController {
@@ -39,5 +41,12 @@ public class BookController {
 	public Book deleteBook(@RequestBody Book book) {
 		 this.bookService.deleteBook(book);
 		 return book;
+	}
+	
+	@PutMapping("update/{id}")
+	public Book putMethodName(@PathVariable("id") int id, @RequestBody Book entity) {
+		//TODO: process PUT request
+		this.bookService.updateBook(id,entity);
+		return entity;
 	}
 }
