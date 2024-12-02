@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1>Displaying all the data</h1>
+	<ul>
+		<li th:each="n, i:${names}"><span th:style="${i.odd} ? 'font-weight:bold; color: red':'color:green'" th:text="${n}"></span></li>
+	</ul>
+</body>
+</html>
