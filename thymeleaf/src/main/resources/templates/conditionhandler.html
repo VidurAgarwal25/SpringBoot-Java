@@ -13,5 +13,15 @@
 	
 	<h2> User is <span th:if="${gender} == 'm'" > Male </span></h2>
 	<h2> Unless works like else <span th:unless="${gender} == 'f'" > operator </span></h2>
+	
+	
+	<h3>3.) Switch Operator</h3>
+	<div th:switch="${#lists.size(mylist)}">
+	<h1 th:case="'1'">List contains 1</h1>
+	<h1 th:case="'2'">List contains 2</h1>
+	<h1 th:case="'3'">List contains 3</h1>
+	<h1 th:case="'4'">List contains 4</h1>
+	<h1 th:case="*">List contains More than 4</h1>
+	</div>
 </body>
 </html>

@@ -31,6 +31,8 @@ public class MainController {
 	public String conditionHandler(Model m) {
 		m.addAttribute("isActive", false);
 		m.addAttribute("gender", "m");
+		List<Integer> list = List.of(100,200,300,400);
+		m.addAttribute("mylist", list);
 		return "conditionhandler";
 	}
 }
