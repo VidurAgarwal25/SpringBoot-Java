@@ -13,17 +13,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
 
 	@SuppressWarnings("deprecation")
-	@RequestMapping(value="/about", method=RequestMethod.GET)
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about(Model model) {
 		model.addAttribute("name", "Vidur Agarwal");
 		model.addAttribute("currentdate", new Date().toLocaleString());
-		return "about"; 
+		return "about";
 	}
-	
+
 	@GetMapping("/multidata")
 	public String multiData(Model m) {
-		List<String> list = List.of("Vidur", "Agarwal","Vidur Agarwal");
-		m.addAttribute("names",list);
+		List<String> list = List.of("Vidur", "Agarwal", "Vidur Agarwal");
+		m.addAttribute("names", list);
 		return "multidata";
+	}
+
+	@GetMapping("/conditionhandler")
+	public String conditionHandler(Model m) {
+		m.addAttribute("isActive", false);
+		return "conditionhandler";
 	}
 }
