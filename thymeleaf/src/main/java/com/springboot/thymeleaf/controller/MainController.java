@@ -30,6 +30,7 @@ public class MainController {
 	@GetMapping("/conditionhandler")
 	public String conditionHandler(Model m) {
 		m.addAttribute("isActive", false);
+		m.addAttribute("gender", "m");
 		return "conditionhandler";
 	}
 }

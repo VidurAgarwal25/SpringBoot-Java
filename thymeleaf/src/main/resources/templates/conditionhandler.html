@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
@@ -8,5 +8,10 @@
 	<h1>Condition Handler</h1>
 	<h3>1.) Elvis Operator</h3>
 	<h2>User is <span th:text="${isActive} ? 'Active': 'InActive'"></span></h2>
+	
+	<h3>2.) If Unless Operator</h3>
+	
+	<h2> User is <span th:if="${gender} == 'm'" > Male </span></h2>
+	<h2> Unless works like else <span th:unless="${gender} == 'f'" > operator </span></h2>
 </body>
 </html>
