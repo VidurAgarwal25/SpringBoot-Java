@@ -20,12 +20,19 @@ Welcome to my repository! Here, you'll find a collection of projects that demons
 Key Features:
 
 1.) JPA Integration: Implemented CRUD operations (Create, Read, Update, Delete) with custom queries using JPA.
+
 2.) RESTful APIs: Created multiple REST APIs with Spring Boot, utilizing @ResponseBody and @Controller annotations.
+
 3.) Thymeleaf Templates: Used Thymeleaf for dynamic templating, with support for iteration, conditionals, and fragment management to build responsive user interfaces.
+
 4.) Spring Boot DevTools: Set up Spring Boot DevTools to avoid restarting the application during testing, enhancing development efficiency.
+
 5.) Dynamic resource paths using ClassPathResource & file upload handling with Spring Boot Returning file URLs for server access.
+
 6.) Form handling with Spring MVC & Thymeleaf.
+
 7.) Server-side validation using Hibernate Validator and javax.validation
+
 8.) Conditional rendering and data validation
 
 
