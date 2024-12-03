@@ -5,9 +5,9 @@
 	<title>Footer Template</title>
 </head>
 <body>
-	<footer id="fragment" th:fragment="footer1">
+	<footer id="fragment" th:fragment="footer1(title)">
 	<div class="container">
-	<h1>Footer Template</h1>
+	<h1 th:text="${title}">Footer Template</h1>
 	<h2>Data for Footer</h2>
 	</div>
 	</footer>
