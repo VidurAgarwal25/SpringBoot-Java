@@ -35,4 +35,11 @@ public class MainController {
 		m.addAttribute("mylist", list);
 		return "conditionhandler";
 	}
+	
+	@GetMapping("/fragmenthandler")
+	public String fragmentHandler(Model model) {
+		model.addAttribute("", "");
+		return "fragmenthandler";
+	}
+	
 }
