@@ -9,11 +9,12 @@
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
 </head>
-<body>
+<body style="background:#e2e2e2;">
 	<div class="container">
 		<div class="row mt-5">
 			<div class="col-md-6 offset-md-3">
 				<form th:action="@{/submit}" method="post" th:object="${loginEntity}">
+				<h1 class="text-center">Register here</h1>
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label">
 						User Name
@@ -22,11 +23,12 @@
 							name="userName" 
 							th:value="${loginEntity.userName}"
 							class="form-control"
+							th:classappend="${#fields.hasErrors('userName')?'is-invalid':''}"
 							id="exampleInputEmail1"
 							aria-describedby="emailHelp">
-						<div id="emailHelp" class="form-text">
-						We'll never share your email with anyone else.
-						</div>
+							<div th:each="e:${#fields.errors('userName')}" th:text="${e}"  class="invalid-feedback">
+							
+							</div>
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">Email</label>
@@ -34,14 +36,11 @@
 						 th:value="${loginEntity.email}"
 						 name="email"
 						 class="form-control"
+						 th:classappend="${#fields.hasErrors('email')?'is-invalid':''}"
 						 id="exampleInputPassword1">
-					</div>
-					<div class="mb-3 form-check">
-						<input type="checkbox" class="form-check-input"
-						id="exampleCheck1">
-						<label class="form-check-label" for="exampleCheck1">
-						Check me out
-						</label>
+						 <div th:each="e:${#fields.errors('email')}" th:text="${e}"  class="invalid-feedback">
+							
+							</div>
 					</div>
 					<button type="submit" class="btn btn-primary">
 					Submit
