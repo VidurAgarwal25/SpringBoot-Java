@@ -3,3 +3,7 @@ thymeleaf/.mvn/wrapper/maven-wrapper.properties
 thymeleaf/.gitattributes
 thymeleaf/mvnw
 thymeleaf/mvnw.cmd
+serversidevalidationmvc/.gitattributes
+serversidevalidationmvc/.mvn/wrapper/maven-wrapper.properties
+serversidevalidationmvc/mvnw
+serversidevalidationmvc/mvnw.cmd
