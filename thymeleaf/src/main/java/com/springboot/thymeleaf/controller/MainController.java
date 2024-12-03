@@ -42,4 +42,11 @@ public class MainController {
 		return "fragmenthandler";
 	}
 	
+	
+	@GetMapping("/inheritingthymeleaf")
+	public String inheritingThymeleaf(Model model) {
+		model.addAttribute("", "");
+		return "contact";
+	}
+	
 }

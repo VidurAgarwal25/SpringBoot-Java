@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(section)">
+<head>
+	<meta charset="UTF-8" />
+	<title>Base Page</title>
+	<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body th:style="'color:red;'">
+<h1>This is Base file and is common</h1>
+<h2>Below is dynamic section where we have used extends keyword</h2>
+	<div th:replace="${section}">
+	</div>
+</body>
+</html>
